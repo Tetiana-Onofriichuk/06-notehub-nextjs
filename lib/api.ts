@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Note, NoteId } from "@/lib/types/note";
+import type { Note, NoteId } from "@/types/note";
 
 axios.defaults.baseURL = "https://notehub-public.goit.study/api";
 axios.defaults.headers.common["Authorization"] = `Bearer ${
