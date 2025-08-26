@@ -38,6 +38,10 @@ export default function NoteList({ notes }: NoteListProps) {
           <div className={css.footer}>
             {/* Тег тепер завжди відображається */}
             <span className={css.tag}>{note.tag || "No tag"}</span>
+            <a href={`/notes/${note.id}`} className={css.link}>
+              View details
+            </a>
+
             <button
               className={css.button}
               onClick={() => {

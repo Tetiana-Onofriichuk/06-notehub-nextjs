@@ -67,6 +67,9 @@
   width: 64px;
   border-radius: 8px;
 }
+.link {
+  color: black;
+}
 @keyframes fadeInUp {
   to {
     opacity: 1;

@@ -23,7 +23,6 @@ export const fetchNotes = async (
   return data;
 };
 
-// Створити нотатку
 export const createNote = async (
   newNote: Omit<Note, "id" | "createdAt" | "updatedAt">
 ) => {
@@ -31,8 +30,12 @@ export const createNote = async (
   return data;
 };
 
-// Видалити нотатку
 export const deleteNote = async (noteId: NoteId): Promise<Note> => {
   const { data } = await axios.delete<Note>(`/notes/${noteId}`);
+  return data;
+};
+
+export const fetchNoteById = async (noteId: NoteId): Promise<Note> => {
+  const { data } = await axios.get<Note>(`/notes/${noteId}`);
   return data;
 };
