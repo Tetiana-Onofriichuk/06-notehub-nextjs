@@ -1,4 +1,6 @@
 "use client";
+
+import Link from "next/link";
 import css from "./NoteList.module.css";
 import type { Note, NoteId } from "@/types/note";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -36,11 +38,15 @@ export default function NoteList({ notes }: NoteListProps) {
           <h2 className={css.title}>{note.title}</h2>
           <p className={css.content}>{note.content}</p>
           <div className={css.footer}>
-            {/* Тег тепер завжди відображається */}
             <span className={css.tag}>{note.tag || "No tag"}</span>
-            <a href={`/notes/${note.id}`} className={css.link}>
+
+            <Link
+              href={`/notes/${note.id}`}
+              className={css.link}
+              aria-label={`View details of note ${note.title}`}
+            >
               View details
-            </a>
+            </Link>
 
             <button
               className={css.button}
