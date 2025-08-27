@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import css from "@/app/notes/Notesclient.module.css";
-// import { Toaster } from "react-hot-toast";
+
 import {
   useQuery,
   useMutation,
@@ -15,7 +15,6 @@ import NoteList from "@/components/NoteList/NoteList";
 import Pagination from "@/components/Pagination/Pagination";
 import Modal from "@/components/Modal/Modal";
 import SearchBox from "@/components/SearchBox/SearchBox";
-// import Loader from "@/components/";
 
 import NoteForm from "@/components/NoteForm/NoteForm";
 
